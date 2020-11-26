@@ -1,0 +1,12 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: FFMS
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: cy
+    password: 1234
+    url: jdbc:mysql://10.46.36.170/ffms?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf8&useSSL=false&allowMultiQueries=true
+mybatis:
+  mapper-locations: classpath:mapper/*.xml

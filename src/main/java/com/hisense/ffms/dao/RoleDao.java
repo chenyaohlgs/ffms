@@ -1,0 +1,7 @@
+package com.hisense.ffms.dao;
+
+import org.apache.ibatis.annotations.Mapper;
+
+@Mapper
+public interface RoleDao {
+}
