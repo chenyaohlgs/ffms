@@ -5,8 +5,8 @@ spring:
     name: FFMS
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    username: cy
-    password: 1234
-    url: jdbc:mysql://10.46.36.170/ffms?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf8&useSSL=false&allowMultiQueries=true
+    username: rzw
+    password: 126rly...
+    url: jdbc:mysql://localhost:3306/ffms?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf8&useSSL=false&allowMultiQueries=true
 mybatis:
   mapper-locations: classpath:mapper/*.xml

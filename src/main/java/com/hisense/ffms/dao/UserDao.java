@@ -10,4 +10,8 @@ public interface UserDao {
 
     @Select("select * from user where id = #{id}")
     public User getUserById(Integer id);
+
+
+    @Select("select * from user where username = #{username}")
+    User getUserByByUsername(String username);
 }
