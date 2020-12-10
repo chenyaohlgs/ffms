@@ -1,6 +1,7 @@
 package com.hisense.ffms.controller;
 
 import com.hisense.ffms.bean.User;
+import com.hisense.ffms.service.RoleService;
 import com.hisense.ffms.service.UserService;
 import com.hisense.ffms.utils.JwtUtil;
 import com.hisense.ffms.utils.Result;
@@ -19,12 +20,16 @@ public class TestController {
     @Autowired
     private UserService userService;
 
+    @Autowired
+    private RoleService roleService;
+
     @ResponseBody
     @GetMapping("user/info")
     public Result getUserInfo(HttpServletRequest request){ // 根据token获取用户信息
         log.info("调用获取info方法");
         User user = userService.getUserByByUsername(JwtUtil.getUserIdByRequest(request));
-        return Result.ok().data("username",user.getUsername()).data("roles",user.getRoleId());
+        String roleName = roleService.getRoleNameById(user.getRoleId());
+        return Result.ok().data("name",user.getRealName()).data("role",roleName);
     }
 
     @ResponseBody
